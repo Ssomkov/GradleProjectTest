@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="java-client-5.0.0-BETA8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../MobileApps/libs/java-client-5.0.0-BETA8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
