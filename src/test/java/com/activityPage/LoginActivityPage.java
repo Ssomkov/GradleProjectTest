@@ -1,16 +1,20 @@
 package com.activityPage;
 
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.MobileElement;
+import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.android.AndroidDriver;
 
 /**
  * Created by User on 05.06.2017.
  */
 public class LoginActivityPage {
 
-    private final AndroidDriver driver;
+    private final AppiumDriver driver;
 
     public WebElement getLoginTestBox() {return driver.findElement(By.id("com.ertelecom.domrutv:id/loginLogin"));}
 
@@ -18,15 +22,19 @@ public class LoginActivityPage {
 
     public WebElement getSignButton() {return driver.findElement(By.id("com.ertelecom.domrutv:id/loginProceedButton"));}
 
+    public WebElement getAccessLocationAllove() {return  driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button"));}
+
     public void autorization(String login, String password) {
-        getLoginTestBox().sendKeys("");
-        getPasswordTestBox().sendKeys("");
+        //getPasswordTestBox().clear();
         getLoginTestBox().sendKeys(login);
+        driver.hideKeyboard();
+        //getPasswordTestBox().clear();
         getPasswordTestBox().sendKeys(password);
+        driver.hideKeyboard();
         getSignButton().click();
     }
 
-    public LoginActivityPage(AndroidDriver driver) {
+    public LoginActivityPage(AppiumDriver driver) {
         this.driver = driver;
     }
 }
