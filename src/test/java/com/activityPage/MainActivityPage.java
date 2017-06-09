@@ -13,8 +13,6 @@ public class MainActivityPage {
 
     private final AppiumDriver driver;
 
-
-
     public MainActivityPage(AppiumDriver driver) {
         this.driver = driver;
     }
@@ -27,6 +25,5 @@ public class MainActivityPage {
 
     public WebElement getHandImageView() {return  driver.findElement(By.id("com.ertelecom.domrutv:id/imgView"));}
 
-
-
+    public WebElement getPersonalInformation() {return  driver.findElement(By.id("com.ertelecom.domrutv:id/menu_item_profile"));}
 }

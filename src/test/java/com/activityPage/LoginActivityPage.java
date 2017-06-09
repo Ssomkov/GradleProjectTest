@@ -25,10 +25,10 @@ public class LoginActivityPage {
     public WebElement getAccessLocationAllove() {return  driver.findElement(By.id("com.android.packageinstaller:id/permission_allow_button"));}
 
     public void autorization(String login, String password) {
-        //getPasswordTestBox().clear();
+        getPasswordTestBox().clear();
         getLoginTestBox().sendKeys(login);
         driver.hideKeyboard();
-        //getPasswordTestBox().clear();
+        getPasswordTestBox().clear();
         getPasswordTestBox().sendKeys(password);
         driver.hideKeyboard();
         getSignButton().click();

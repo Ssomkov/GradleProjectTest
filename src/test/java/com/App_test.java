@@ -80,7 +80,8 @@ public class App_test {
         loginActivityPage.autorization("545465887541", "saddddqweww");
         Assert.assertTrue(loginActivityPage.getSignButton().isDisplayed());
         loginActivityPage.autorization("590014831333", "Qwerty12345");
-        Assert.assertTrue(mainLoginActivityPage.getHandImageView().isDisplayed());
+        mainLoginActivityPage.getActionProfile().click();
+        Assert.assertTrue(mainLoginActivityPage.getPersonalInformation().isDisplayed());
     }
 }
 
